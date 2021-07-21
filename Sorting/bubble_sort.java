@@ -40,6 +40,8 @@ Slows when number of elements grows
 partitions array into sorted and unsorted
 to sort in ascending, move the larger elements to the right, starting the process from index 0
 after every traversal of the outer loop, the largest element gets shifted towards the right (larger values bubble to right)
+In-place algorithm
 O(n^2) - degrades quickly
 one of the least efficient algos
+stable sort algorithm (swaped only when the element is greater, therefore postitions remain the same)
 */
