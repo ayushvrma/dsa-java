@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.Objects;
 
 public class array_list {
-    private String firstname;
-    private String lastname;
-    private int id;
+    String firstname;
+    String lastname;
+    int id;
 
     public array_list(String firstname, String lastname, int id)
     {
