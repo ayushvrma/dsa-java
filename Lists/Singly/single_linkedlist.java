@@ -1,7 +1,9 @@
-package Lists;
+package Lists.Singly;
 
 
 import java.util.Objects;
+
+import Lists.array_list;
 
 public class single_linkedlist {
 
@@ -48,8 +50,8 @@ public class single_linkedlist {
             return false;
         }
         array_list array_list = (array_list) o;
-        return Objects.equals(firstname, array_list.firstname) && Objects.equals(lastname, array_list.lastname)
-                && id == array_list.id;
+        return Objects.equals(firstname, array_list.getFirstname()) && Objects.equals(lastname, array_list.getLastname())
+                && id == array_list.getId();
     }
 
     @Override

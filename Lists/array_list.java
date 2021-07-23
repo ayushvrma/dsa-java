@@ -7,7 +7,7 @@ import java.util.Objects;
 public class array_list {
     String firstname;
     String lastname;
-    int id;
+    public int id;
 
     public array_list(String firstname, String lastname, int id)
     {

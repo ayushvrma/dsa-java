@@ -1,5 +1,5 @@
 
-package Lists;
+package Lists.Singly;
 public class EmployeeNode{
 
     private single_linkedlist employee;

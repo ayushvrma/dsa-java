@@ -1,4 +1,4 @@
-package Lists;
+package Lists.Singly;
 public class EmployeeLinkedList{
     private EmployeeNode head;
     private int size;
