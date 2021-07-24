@@ -7,7 +7,6 @@ public class EmployeeLinkedList{
     public void addToFront(doubly_linkedlist employee)
     {
         EmployeeNode node = new EmployeeNode(employee);
-        node.setNext(head);
         
         if(head == null)
         {
@@ -16,6 +15,7 @@ public class EmployeeLinkedList{
         else
         {
             head.setPrevious(node);
+            node.setNext(head);
         }
         head = node;
         size++;
