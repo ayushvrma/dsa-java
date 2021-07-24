@@ -2,7 +2,7 @@ package Lists.Doubly;
 public class EmployeeLinkedList{
     private EmployeeNode head;
     private int size;
-
+    private EmployeeNode tail;
 
     public void addToFront(doubly_linkedlist employee)
     {
