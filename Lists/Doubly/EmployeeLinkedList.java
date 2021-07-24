@@ -74,7 +74,7 @@ public class EmployeeLinkedList{
         else{
             head.getNext().setPrevious(null);
         }
-        
+
         head = head.getNext();
         size--;
         removedNode.setNext(null); //to completly remove the node
@@ -94,5 +94,25 @@ public class EmployeeLinkedList{
         size++;
     }
 
+    public EmployeeNode removeFromEnd(doubly_linkedlist employee)
+    {
+        if(isEmpty())
+        {
+            return null;
+        }
 
+        EmployeeNode removedNode = tail;
+
+        if(tail.getNext() ==null)
+        {
+            head = null;
+        }
+        else{
+            tail.getPrevious().setNext(null);
+        }
+        tail = tail.getPrevious();
+        size--;
+        removedNode.setPrevious(null);
+        return removedNode;
+    }
 }
