@@ -15,7 +15,10 @@ public class jdk_linkedlist {
         list.addFirst(dkarla);
 
 
-        list.add(new array_list("ashwit", "sharma", 42000)); //adds to the end of the Linked List
+        list.add(new array_list("ashwit", "sharma", 42000)); //adds to the end of the Linked List addLast() same method
+
+        list.removeFirst();
+        list.removeLast(); //or remove()
 
         Iterator iter = list.iterator();
 
