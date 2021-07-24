@@ -66,6 +66,15 @@ public class EmployeeLinkedList{
         return null;
 
         EmployeeNode removedNode = head;
+        
+        if(head.getNext() ==null)
+        {
+            tail = null;
+        }
+        else{
+            head.getNext().setPrevious(null);
+        }
+        
         head = head.getNext();
         size--;
         removedNode.setNext(null); //to completly remove the node
@@ -84,4 +93,6 @@ public class EmployeeLinkedList{
         tail = node;
         size++;
     }
+
+
 }
