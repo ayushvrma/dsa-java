@@ -103,7 +103,7 @@ public class EmployeeLinkedList{
 
         EmployeeNode removedNode = tail;
 
-        if(tail.getNext() ==null)
+        if(tail.getPrevious() ==null)
         {
             head = null;
         }
