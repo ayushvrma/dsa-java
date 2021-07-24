@@ -27,7 +27,7 @@ public class EmployeeLinkedList{
         System.out.println("Head->");
         while(current!=null)
         {
-            System.out.print(current+" --> ");
+            System.out.print(current+" <-> ");
             current = current.getNext();
         }
         System.out.print("null");
@@ -70,5 +70,18 @@ public class EmployeeLinkedList{
         size--;
         removedNode.setNext(null); //to completly remove the node
         return removedNode;
+    }
+    public void addToEnd(doubly_linkedlist employee)
+    {
+        EmployeeNode node = new EmployeeNode(employee);
+        if(tail==null){
+            head = node;
+        }
+        else{
+            tail.setNext(node);
+            node.setPrevious(tail);
+        }
+        tail = node;
+        size++;
     }
 }
