@@ -50,24 +50,24 @@ public class IntegerLinkedList{
 
         IntegerNode temp = head;
 
-        if(isEmpty())
+        if(head==null || head.getEmployee().value >=value)
         {
-            head = node;
-            head.setNext(null);
+            addToFront(value);
+            return;
         }
-        else{
 
-            while(temp.getNext()!=null && temp.getNext().getEmployee().value <=value)
+        IntegerNode current = head.getNext();
+        IntegerNode prev = head;
+
+            while(current!=null && current.getEmployee().value <=value)
             {
-                temp = temp.getNext();
+                prev = current;
+                current = current.getNext();
             }
-            if(temp.getNext()==null)
-            {
-                temp.setNext(node);
-                node.setNext(null);
-            }
-            node.setNext(temp.getNext());
-            temp.setNext(node);
+            node.setNext(current);
+            prev.setNext(node);
+            size++;
+            return;
         }
-    }
+    
 }
