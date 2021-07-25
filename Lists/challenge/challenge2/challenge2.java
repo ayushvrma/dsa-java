@@ -23,12 +23,16 @@ public class challenge2 {
     public static void main(String[] args) {
 
         IntegerLinkedList list = new IntegerLinkedList();
-        list.addToFront(8);
-        list.addToFront(6);
-        list.addToFront(4);
-        list.addToFront(2);
+        // list.addToFront(8);
+        // list.addToFront(6);
+        // list.addToFront(4);
+        // list.addToFront(2);
 
         list.addSorted(5);
+        list.addSorted(3);
+        list.addSorted(8);
+        list.addSorted(4);
+        list.addSorted(9);
 
         list.printList();
     }
