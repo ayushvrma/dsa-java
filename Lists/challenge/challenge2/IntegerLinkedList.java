@@ -48,7 +48,6 @@ public class IntegerLinkedList{
     {
         IntegerNode node = new IntegerNode(new challenge2(value));
 
-        IntegerNode temp = head;
 
         if(head==null || head.getEmployee().value >=value)
         {

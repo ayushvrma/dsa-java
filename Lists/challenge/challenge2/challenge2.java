@@ -2,7 +2,6 @@
 
 package Lists.challenge.challenge2;
 
-import java.util.Objects;
 
 public class challenge2 {
     int value;
