@@ -1,4 +1,7 @@
 package Lists.challenge;
+
+import java.util.Currency;
+
 public class EmployeeLinkedList{
     private EmployeeNode head;
     private int size;
@@ -117,18 +120,35 @@ public class EmployeeLinkedList{
     }
 
 
-    public void addBefore(challenge1 employee, int index)
+    public boolean addBefore(challenge1 newemployee, challenge1 existingEmployee)
     {
         EmployeeNode temp = head;
-        EmployeeNode node = new EmployeeNode(employee);
-        int i=0;
-        while(i<index)
-        {
-            temp = temp.getNext();
-            i++;
-        }
-        node.setNext(temp.getNext());
-        node.setPrevious(temp);
-        temp.setNext(node);
+        EmployeeNode newemp = new EmployeeNode(newemployee);
+
+            
+            while(temp!=null && !temp.getEmployee().equals(existingEmployee))
+            {
+                temp = temp.getNext();
+            }
+
+            if(temp==null)
+            {
+                return false;
+            }
+
+            newemp.setPrevious(temp.getPrevious());
+            newemp.setNext(temp);
+            temp.setPrevious(newemp);
+
+            if(head==temp)
+            {
+                head = newemp;
+            }
+            else{
+                newemp.getPrevious().setNext(newemp);
+            }
+            size++;
+            return true;
+        
     }
 }

@@ -77,9 +77,10 @@ public class challenge1 {
 
         //list.printList();
 
-        list.addBefore(new challenge1("MR Add", "before", 1234), 0);
+        boolean added= list.addBefore(new challenge1("MR Add", "before", 1234), dkarla);
 
         list.printList();
+        System.out.println(added);
         
     }
 }
