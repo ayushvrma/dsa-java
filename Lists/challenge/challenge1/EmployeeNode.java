@@ -1,5 +1,5 @@
 
-package Lists.challenge;
+package Lists.challenge.challenge1;
 public class EmployeeNode{
 
     private challenge1 employee;
