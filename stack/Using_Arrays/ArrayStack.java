@@ -1,5 +1,7 @@
 package stack.Using_Arrays;
 
+import java.util.EmptyStackException;
+
 public class ArrayStack {
         
         private Employee[] stack;
@@ -14,11 +16,26 @@ public class ArrayStack {
         {
             if(top==stack.length)
             {
-                //need to resize the backing array
+                //need to resize the backing array, requires O(n)
                 Employee[] newArray = new Employee[2*stack.length];
                 System.arraycopy(stack, 0, newArray,0, stack.length);
                 stack = newArray;
             }
+            
+            stack[top++] = employee;
+        }
+
+        public Employee pop(){
+            if(isEmpty()){
+                throw new EmptyStackException();
+            }
+            Employee employee = stack[--top];
+            stack[top]  = null; //to completely remove that item
+            return employee;
+        }
+
+        public boolean isEmpty(){
+            return top==0;
         }
 }
 
