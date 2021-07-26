@@ -10,6 +10,10 @@ public class Main {
         stack.push(new stack.Using_Arrays.Employee("unsa", "sechen", 120));
         stack.push(new stack.Using_Arrays.Employee("oyus", "vrma", 120));
         stack.push(new stack.Using_Arrays.Employee("raghav", "chnna", 120));
+
+        
+        System.out.println("popped item: "+ stack.pop());
+        stack.printStack();
     }
     
 }
