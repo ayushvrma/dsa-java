@@ -1,6 +1,7 @@
 package stack.Using_LinkedList;
 
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 public class LinkedStack {
     
@@ -26,5 +27,14 @@ public class LinkedStack {
 
     public boolean isEmpty(){
         return stack.isEmpty();
+    }
+
+    public void printStack()
+    {
+        ListIterator<Employee> iterator = stack.listIterator();
+        while(iterator.hasNext())
+        {
+            System.out.println(iterator.next());
+        }
     }
 }
