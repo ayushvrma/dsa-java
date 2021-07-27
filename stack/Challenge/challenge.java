@@ -3,7 +3,10 @@ import java.util.*;
 
 public class challenge {
     public static void main(String[] args) {
-        System.out.println(isPalindrome("racecar"));
+        //System.out.println(isPalindrome("racecar"));
+        //System.out.println(isPalindrome("madam"));
+        System.out.println(isPalindrome("bullshit"));
+        //System.out.println(isPalindrome("I am mai"));
     }
 
     public static boolean isPalindrome(String input){
@@ -23,11 +26,10 @@ public class challenge {
             output+=list.pop();
             //System.out.println(output);
         }
-        System.out.println(initial);
-        System.out.println(output);
+        // System.out.println(initial);
+        // System.out.println(output);
         if(initial.equals(output))
             return true;
-        else
-            return false;
+        return false;
     }
 }
