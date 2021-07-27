@@ -44,4 +44,16 @@ public class ArrayQueue {
     {
         return back-front;
     }
+
+    public Employee peek()
+    {
+        if(size()==0)
+            throw new NoSuchElementException();
+        return queue[front];
+    }
+
+    public void printQueue(){
+        for(int i=front;i<back;i++)
+            System.out.println(queue[i]);
+    }
 }
