@@ -21,6 +21,9 @@ public class ArrayQueue {
             System.arraycopy(queue , 0, newArray, queue.length-front, back);
 
             queue = newArray;
+
+            front =0;
+            back = size();
         }
         queue[back] =employee;
         
@@ -44,6 +47,10 @@ public class ArrayQueue {
         if(size()==0)
         {
             front=back=0;
+        }
+        else if(front==queue.length)
+        {
+            front =0;
         }
         return employee;
     }
