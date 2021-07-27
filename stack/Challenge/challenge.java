@@ -19,8 +19,7 @@ public class challenge {
         }
         for(int i=0; i<list.size();i++)
         {
-            list2.add(list.pop());
-            output+=temp.pop();
+            output+=list.pop();
         }
         if(initial==output)
             return true;
