@@ -13,15 +13,19 @@ public class challenge {
         LinkedList<Character> list = new LinkedList<>();
         for(int i=0; i<input.length();i++)
         {
-            if(Character.isLetter(input.charAt(i)))
+            if(Character.isLetter(input.charAt(i))){
                 list.add(input.charAt(i));
                 initial+= input.charAt(i);
+            }
         }
-        for(int i=0; i<list.size();i++)
+        for(int i=0; i<initial.length();i++)
         {
             output+=list.pop();
+            //System.out.println(output);
         }
-        if(initial==output)
+        System.out.println(initial);
+        System.out.println(output);
+        if(initial.equals(output))
             return true;
         else
             return false;
