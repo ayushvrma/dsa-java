@@ -57,7 +57,11 @@ public class ArrayQueue {
 
     public int size()
     {
-        return back-front;
+        if(front<=back)
+            return back-front;
+        else{
+            return back-front+queue.length;
+        }
     }
 
     public Employee peek()
