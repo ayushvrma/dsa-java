@@ -1,4 +1,4 @@
-package Hashtables;
+package Hashtables.SimpleHashTable;
 
 public class SimpleHashTable{
 
