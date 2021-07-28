@@ -18,14 +18,15 @@ public class challenge {
         for (int i = 0; i < input.length(); i++) {
             if (Character.isLetter(input.charAt(i))) {
                 stack.push(input.charAt(i));
-                queue.push(input.charAt(i));
+                queue.addLast(input.charAt(i));
             }
         }
 
         for(int i=0; i<stack.size();i++)
         {
-            if(!(stack.pop() == queue.pop()))
-                return false;
+            //System.out.println(stack.pop()+ ","+ queue.pop());
+            if(!(stack.pop() == queue.pop())){
+                return false;}
         }
         return true;
     }
