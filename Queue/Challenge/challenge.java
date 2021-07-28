@@ -9,29 +9,24 @@ public class challenge {
         System.out.println(isPalindrome("I am mai"));
     }
 
+
     public static boolean isPalindrome(String input){
         input = input.toLowerCase();
-        String initial="";
-        String output = "";
-        LinkedList<Character> list = new LinkedList<>();
-        for(int i=0; i<input.length();i++)
-        {
-            if(Character.isLetter(input.charAt(i))){
-                list.push(input.charAt(i));
-                initial+= input.charAt(i);
+        LinkedList<Character> stack = new LinkedList<>();
+        LinkedList<Character> queue = new LinkedList<>();
+
+        for (int i = 0; i < input.length(); i++) {
+            if (Character.isLetter(input.charAt(i))) {
+                stack.push(input.charAt(i));
+                queue.push(input.charAt(i));
             }
         }
-        //System.out.println(list);
-        // System.out.println(list.pop().toString());
-        for(int i=0; i<initial.length();i++)
+
+        for(int i=0; i<stack.size();i++)
         {
-            output+=list.pop();
-            //System.out.println(output);
+            if(!(stack.pop() == queue.pop()))
+                return false;
         }
-        //  System.out.println(initial);
-        // System.out.println(output);
-        if(initial.equals(output))
-            return true;
-        return false;
+        return true;
     }
 }
