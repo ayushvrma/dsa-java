@@ -43,8 +43,12 @@ public class SimpleHashTable{
 
     public Employee get(String key)
     {
-        int hashedkey = hashKey(key);
-        return hashtable[hashedkey];
+        int hashedkey = findKey(key);
+        if(hashedkey==-1)
+        {
+            return null;
+        }
+        return hashtable[hashedkey].employee;
     }
 
     public void printTable()
