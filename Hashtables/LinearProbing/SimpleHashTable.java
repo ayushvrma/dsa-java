@@ -2,11 +2,11 @@ package Hashtables.LinearProbing;
 
 public class SimpleHashTable{
 
-    private Employee[] hashtable;
+    private StoredEmployee[] hashtable;
 
     public SimpleHashTable()
     {
-        hashtable = new Employee[10];
+        hashtable = new StoredEmployee[10];
     }
 
     private int hashKey(String key){
@@ -37,11 +37,11 @@ public class SimpleHashTable{
             System.out.println("Already an employee at position "+ hashedkey);
         }
         else{
-            hashtable[hashedkey]=employee;
+            hashtable[hashedkey]=new StoredEmployee(key,employee);
         }
     }
 
-    private Employee get(String key)
+    public Employee get(String key)
     {
         int hashedkey = hashKey(key);
         return hashtable[hashedkey];
