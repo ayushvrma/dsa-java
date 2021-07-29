@@ -18,10 +18,21 @@ public class SimpleHashTable{
 
         if(occupied(hashedkey))
         {
-            
+            int stopIndex = hashedkey;
+            if(hashedkey==hashtable.length-1)
+            {
+                hashedkey=0;
+            }
+            else{
+                hashedkey++;
+            }
+            while(occupied(hashedkey)&&hashedkey !=stopIndex)
+            {
+                hashedkey = (hashedkey+1)% hashtable.length;
+            }
         }
 
-        if(hashtable[hashedkey] != null)
+        if(occupied(hashedkey))
         {
             System.out.println("Already an employee at position "+ hashedkey);
         }
@@ -36,7 +47,7 @@ public class SimpleHashTable{
         return hashtable[hashedkey];
     }
 
-    private void printTable()
+    public void printTable()
     {
         for(int i=0 ;i<hashtable.length;i++ )
         {
