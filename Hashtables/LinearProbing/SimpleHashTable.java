@@ -55,7 +55,10 @@ public class SimpleHashTable{
     {
         for(int i=0 ;i<hashtable.length;i++ )
         {
-            System.out.println(hashtable[i]);
+            if(hashtable[i]!=null){
+                System.out.println("empty");
+            }
+            System.out.println("position "+i+": "+hashtable[i].employee);
         }
     }
 
