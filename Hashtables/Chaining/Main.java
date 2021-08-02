@@ -16,7 +16,11 @@ public class Main {
 
         ht.printTable();
 
-        System.out.println("Retrieving raghav"+ ht.get("raghav"));
+        // System.out.println("Retrieving raghav"+ ht.get("raghav"));
+
+        // ht.remove("oyus");
+        // ht.remove("dkarla");
+        // ht.printTable();
     }
 }
 /*
