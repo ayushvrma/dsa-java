@@ -40,8 +40,11 @@ public class ChainedHashTable{
         int hashedKey = hashKey(key);
         ListIterator<StoredEmployee> iterator = hashtable[hashedKey].listIterator();
         StoredEmployee employee = null;
+        int index = 0;
+
         while (iterator.hasNext()) {
             employee = iterator.next();
+            index++;
             if (employee.key.equals(key)) {
                 break;
             }
@@ -51,7 +54,7 @@ public class ChainedHashTable{
             return null;
         }
         else{
-            hashtable[hashedKey].remove(employee);
+            hashtable[hashedKey].remove(index);
             return employee.employee;
         }
     }
