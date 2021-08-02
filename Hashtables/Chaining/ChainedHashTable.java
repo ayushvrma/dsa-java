@@ -35,4 +35,24 @@ public class ChainedHashTable{
         }
         return null;
     }
+
+    public Employee remove(String key){
+        int hashedKey = hashKey(key);
+        ListIterator<StoredEmployee> iterator = hashtable[hashedKey].listIterator();
+        StoredEmployee employee = null;
+        while (iterator.hasNext()) {
+            employee = iterator.next();
+            if (employee.key.equals(key)) {
+                break;
+            }
+        }
+        if(employee==null)
+        {
+            return null;
+        }
+        else{
+            hashtable[hashedKey].remove(employee);
+            return employee.employee;
+        }
+    }
 }
