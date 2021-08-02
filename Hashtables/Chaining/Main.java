@@ -2,10 +2,10 @@ package Hashtables.Chaining;
 
 public class Main {
     public static void main(String[] args) {
-        Employee dkarla = new Employee("dee", "karla", 120);
-        Employee unsa = new Employee("unsa", "sechen", 120);
-        Employee oyus = new Employee("oyus", "vrma", 120);
-        Employee raghav = new Employee("raghav", "chnna", 120);
+        Employee dkarla = new Employee("dee", "karla", 420);
+        Employee unsa = new Employee("unsa", "sechen", 690);
+        Employee oyus = new Employee("oyus", "vrma", 888);
+        Employee raghav = new Employee("raghav", "chnna", 969);
 
         ChainedHashTable ht = new ChainedHashTable();
 
@@ -14,13 +14,13 @@ public class Main {
         ht.put("ayush", oyus);
         ht.put("raghav", raghav);
 
+        //ht.printTable();
+
+        System.out.println("Retrieving raghav"+ ht.get("raghav"));
+
+        ht.remove("oyus");
+        ht.remove("dkarla");
         ht.printTable();
-
-        // System.out.println("Retrieving raghav"+ ht.get("raghav"));
-
-        // ht.remove("oyus");
-        // ht.remove("dkarla");
-        // ht.printTable();
     }
 }
 /*
