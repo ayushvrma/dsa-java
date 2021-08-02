@@ -40,7 +40,7 @@ public class ChainedHashTable{
         int hashedKey = hashKey(key);
         ListIterator<StoredEmployee> iterator = hashtable[hashedKey].listIterator();
         StoredEmployee employee = null;
-        int index = 0;
+        int index = -1;
 
         while (iterator.hasNext()) {
             employee = iterator.next();
