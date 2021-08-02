@@ -18,7 +18,7 @@ public class Main {
 
         System.out.println("Retrieving raghav"+ ht.get("raghav"));
 
-        ht.remove("oyus");
+        ht.remove("raghav");
         ht.remove("dkarla");
         ht.printTable();
     }
