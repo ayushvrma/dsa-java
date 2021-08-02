@@ -99,7 +99,7 @@ public class SimpleHashTable{
             return null;
         }
         Employee employee = hashtable[hashedKey].employee;
-        //hashtable[hashedKey]= null;
+        hashtable[hashedKey]= null;
         
         StoredEmployee[] oldHashtable = hashtable;
         hashtable = new StoredEmployee[oldHashtable.length];
