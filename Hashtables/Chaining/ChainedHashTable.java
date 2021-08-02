@@ -58,4 +58,21 @@ public class ChainedHashTable{
             return employee.employee;
         }
     }
+
+    public void printTable(){
+        for(int i=0; i<hashtable.length;i++)
+        {
+            if(hashtable[i].isEmpty()){
+                System.out.println("Position "+i+": is Empty");
+            }
+            else{
+                System.out.print("Position " + i + ": ");
+                ListIterator<StoredEmployee> iterator = hashtable[i].listIterator();
+                while(iterator.hasNext()){
+                    System.out.print(iterator.next().employee + " -> ");
+                }
+                System.out.println("null");
+            }
+        }
+    }
 }
