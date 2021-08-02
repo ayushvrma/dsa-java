@@ -1,6 +1,7 @@
 package Hashtables.Chaining;
 
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 public class ChainedHashTable{
     private LinkedList<StoredEmployee>[] hashtable;
@@ -19,5 +20,19 @@ public class ChainedHashTable{
     {
         int hashedKey = hashKey(key);
         hashtable[hashedKey].add(new StoredEmployee(key, employee));
+    }
+
+    public Employee get(String key){
+        int hashedKey = hashKey(key);
+        ListIterator<StoredEmployee> iterator = hashtable[hashedKey].listIterator();
+        StoredEmployee employee = null;
+        while(iterator.hasNext()){
+            employee = iterator.next();
+            if(employee.key.equals(key))
+            {
+                return employee.employee;
+            }
+        }
+        return null;
     }
 }
