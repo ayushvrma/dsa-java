@@ -15,6 +15,9 @@ public class Main {
         hashMap.put("ayush",oyus);
         hashMap.put("raghav",raghav);
 
+        System.out.println(hashMap.containsKey("divij")); //faster
+        System.out.println(hashMap.containsValue(oyus));
+
         // Iterator<Employee> iterator = hashMap.values().iterator();
         // while(iterator.hasNext())
         // {
