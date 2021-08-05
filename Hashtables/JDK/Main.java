@@ -19,8 +19,10 @@ public class Main {
         Employee employee = hashMap.put("divij", raghav); //will replace dkarla object with raghav object and return dkarla
         System.out.println(employee);
 
-        System.out.println(hashMap.containsKey("divij")); //faster
-        System.out.println(hashMap.containsValue(oyus));
+        // System.out.println(hashMap.containsKey("divij")); //faster
+        // System.out.println(hashMap.containsValue(oyus));
+
+        hashMap.putIfAbsent("divij", raghav); //now it will not replace cause divij key is already present
 
         // Iterator<Employee> iterator = hashMap.values().iterator();
         // while(iterator.hasNext())
