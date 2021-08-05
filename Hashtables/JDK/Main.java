@@ -30,8 +30,12 @@ public class Main {
         //     System.out.println(iterator.next());
         // }
         
-        //new forEach method printing
-        hashMap.forEach((k,v)->System.out.println("Key= "+k+" Value= "+v));
+
+        System.out.println(hashMap.get("ayush"));
+       // System.out.println(hashMap.getOrDefault("lmfao", oyus));
+       hashMap.remove("divij"); 
+       //new forEach method printing
+        //hashMap.forEach((k,v)->System.out.println("Key= "+k+" Value= "+v));
 
     }
 }
