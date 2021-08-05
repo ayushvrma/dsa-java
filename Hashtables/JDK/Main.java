@@ -15,7 +15,11 @@ public class Main {
         hashMap.put("ayush",oyus);
         hashMap.put("raghav",raghav);
 
-        
+        Iterator<Employee> iterator = hashMap.values().iterator();
+        while(iterator.hasNext())
+        {
+            System.out.println(iterator.next());
+        }
     }
 }
 
