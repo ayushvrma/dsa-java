@@ -13,7 +13,11 @@ public class Main {
         hashMap.put("divij", dkarla);
         hashMap.put("unnayan",unsa);
         hashMap.put("ayush",oyus);
-        hashMap.put("raghav",raghav);
+
+        //overiding
+
+        Employee employee = hashMap.put("divij", raghav); //will replace dkarla object with raghav object and return dkarla
+        System.out.println(employee);
 
         System.out.println(hashMap.containsKey("divij")); //faster
         System.out.println(hashMap.containsValue(oyus));
