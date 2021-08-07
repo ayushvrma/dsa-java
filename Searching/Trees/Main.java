@@ -18,6 +18,9 @@ public class Main {
         System.out.println();
 
         System.out.println(intTree.get(27));
+
+        System.out.println(intTree.max());
+        System.out.println(intTree.min());
     }
 }
 /*
