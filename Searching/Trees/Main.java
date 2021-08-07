@@ -13,6 +13,7 @@ public class Main {
         intTree.insert(26);
         intTree.insert(22);
         intTree.insert(32);
+        intTree.insert(17);
 
         intTree.traverseInOrder(); //should come out in sorted order
         System.out.println();
@@ -21,6 +22,18 @@ public class Main {
 
         System.out.println(intTree.max());
         System.out.println(intTree.min());
+
+        intTree.delete(15); //case 1
+        intTree.traverseInOrder(); 
+        System.out.println();
+
+        intTree.delete(17);//case 2
+        intTree.traverseInOrder();
+        System.out.println();
+
+        intTree.delete(25);// case 3
+        intTree.traverseInOrder();
+        System.out.println();
     }
 }
 /*
