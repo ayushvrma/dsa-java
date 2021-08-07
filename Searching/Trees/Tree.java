@@ -46,4 +46,31 @@ public class Tree {
             return root.max();
         }
     }
+
+    public void delete(int value){
+        root = delete(root, value); //another reccursive method
+    }
+
+    private TreeNode delete(TreeNode subTreeNode, int value){
+        if(subTreeNode == null)
+        {
+            return subTreeNode;
+        }
+        if(value< subTreeNode.getData()){
+            subTreeNode.setLeftChild(delete(subTreeNode.getLeftChild(), value));;
+        }
+        else if(value>subTreeNode.getData())
+        {
+            subTreeNode.setRigNode(delete(subTreeNode.getRigNode(), value));
+        }
+        else{
+            if(subTreeNode.getLeftChild()==null){
+                return subTreeNode.getRigNode(); //null if it has no children, replaced if it has a right child
+            }
+            else if(subTreeNode.getRigNode()==null){
+                return subTreeNode.getLeftChild();
+            }
+        }
+        return subTreeNode; //when this is not the node we want to delete
+    }
 }
