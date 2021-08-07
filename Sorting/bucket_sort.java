@@ -18,7 +18,7 @@ public class bucket_sort {
         List<Integer> buckets[] = new List[10];
 
         for(int i=0; i<buckets.length;i++){
-            buckets[i] = new ArrayList<Integer>(); //linkedlist can also be used
+            buckets[i] = new ArrayList<Integer>(); //linkedlist can also be used    
         }
         for(int i=0;i<arr.length;i++)
         {
