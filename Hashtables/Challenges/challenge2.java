@@ -17,6 +17,26 @@ public class challenge2 {
         employees.add(new Employee("oyus", "vrma", 420));
         employees.add(new Employee("raghav", "chnna", 10)); //duplicate values
 
-        Map<String, Employee> hashMap = new HashMap<String,Employee>();
+        employees.forEach(e -> System.out.println(e));
+
+        Map<Integer, Employee> employeeTable = new HashMap<Integer,Employee>();
+        ListIterator<Employee> iterator = employees.listIterator();
+
+        List<Employee> remove = new ArrayList<>();
+        while(iterator.hasNext())
+        {
+            Employee employee = iterator.next();
+            if(employeeTable.containsKey(employee.getId())){
+                remove.add(employee);
+            }
+            else{
+                employeeTable.put(employee.getId(), employee);
+            }
+        }
+        for(Employee employee:remove){
+            employees.remove(employee);
+        }
+        System.out.println("-------");
+        employees.forEach(e->System.out.println(e));
     }
 }
