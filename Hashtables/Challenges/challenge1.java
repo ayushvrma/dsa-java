@@ -1,6 +1,4 @@
 package Hashtables.Challenges;
-
-import java.util.*;
 public class challenge1{
     public static void main(String[] args) {
         int nums[] = new int[10];
