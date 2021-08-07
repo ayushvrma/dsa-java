@@ -15,6 +15,7 @@ public class Main {
         intTree.insert(32);
 
         intTree.traverseInOrder(); //should come out in sorted order
+        System.out.println();
 
         System.out.println(intTree.get(27));
     }

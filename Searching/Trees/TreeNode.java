@@ -72,6 +72,15 @@ public class TreeNode {
         }
     }
     
+    public int max(){
+        if(rightChild==null)
+        {
+            return data;
+        }
+        else{
+            return rightChild.max();
+        }
+    }
 
     public TreeNode(int data) {
         this.data = data;
