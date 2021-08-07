@@ -25,7 +25,7 @@ public class bucket_sort {
             buckets[hash(arr[i])].add(arr[i]);
         }
         for(List bucket:buckets){
-            Collections.sort(bucket); //uses merge sort
+            //Collections.sort(bucket); //uses merge sort
         }
         int j=0;
         for(int i=0;i<buckets.length;i++)//i tracking where we are in the buckets array
