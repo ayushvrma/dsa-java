@@ -70,6 +70,12 @@ public class Tree {
             else if(subTreeNode.getRigNode()==null){
                 return subTreeNode.getLeftChild();
             }
+            //largest value of left sub tree or smallest value of right sub tree
+            //case 3: to delete node havin 2 children
+            subTreeNode.setData(subTreeNode.getRigNode().min());
+
+            //then delete the node that has the smallest value in the right sub tree
+            subTreeNode.setRigNode(delete(subTreeNode.getRigNode(), subTreeNode.getData()));
         }
         return subTreeNode; //when this is not the node we want to delete
     }
