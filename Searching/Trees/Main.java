@@ -34,6 +34,8 @@ public class Main {
         intTree.delete(25);// case 3
         intTree.traverseInOrder();
         System.out.println();
+
+        intTree.traversePreOrder();
     }
 }
 /*

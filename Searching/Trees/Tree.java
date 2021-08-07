@@ -79,4 +79,11 @@ public class Tree {
         }
         return subTreeNode; //when this is not the node we want to delete
     }
+
+    public void traversePreOrder(){
+        if(root!=null)
+        {
+            root.traversePreOrder();
+        }
+    }
 }
