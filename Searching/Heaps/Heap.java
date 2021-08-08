@@ -17,7 +17,14 @@ public class Heap {
         heap[size++]=value;
     }
 
-    
+    private void fixHeapAbove (int index){
+        int newValue = heap[index];
+        while(index>0 && newValue> heap[getParent(index)]){//means weve hit the root
+            heap[index] = heap[getParent(index)];
+            index = getParent(index);
+        }
+        heap[index] = newValue;
+    }
 
     public boolean isFull(){
         return size==heap.length;
