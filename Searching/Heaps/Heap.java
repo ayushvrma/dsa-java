@@ -17,7 +17,7 @@ public class Heap {
         heap[size++]=value;
 
         fixHeapAbove(size);
-        size++;
+        //size++;
     }
 
     public boolean isEmpty(){
