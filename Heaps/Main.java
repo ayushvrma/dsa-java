@@ -17,7 +17,7 @@ public class Main {
 
        // heap.delete(1); //delete 75
 
-        heap.sort();
+        heap.sort(); //worst time complexity is O(nlogn)
 
         heap.printHeap();
     }
