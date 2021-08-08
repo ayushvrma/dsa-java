@@ -15,6 +15,9 @@ public class Heap {
         }
 
         heap[size++]=value;
+
+        fixHeapAbove(size);
+        size++;
     }
 
     private void fixHeapAbove (int index){
