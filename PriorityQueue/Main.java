@@ -15,6 +15,16 @@ public class Main {
         pq.add(-3492);
         pq.add(429);
 
-        System.out.println(pq.peek());
+        
+        System.out.println(pq.remove()); //removes the highest priority
+        
+        System.out.println(pq.poll()); ///same as remove
+
+        System.out.println(pq.peek());//gives the highest priority
+
+        Object ints[] = pq.toArray();
+        for(Object nums:ints){
+            System.out.println(nums);
+        }
     }
 }
