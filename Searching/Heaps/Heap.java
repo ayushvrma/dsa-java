@@ -20,6 +20,14 @@ public class Heap {
         size++;
     }
 
+    public boolean isEmpty(){
+        return size==0;
+    }
+
+    public int getChild(int index, boolean left){
+        return 2* index + (left?1:2); //if its left we want 1 right we want 2 (formula)
+    }
+
     private void fixHeapAbove (int index){
         int newValue = heap[index];
         while(index>0 && newValue> heap[getParent(index)]){//means weve hit the root
