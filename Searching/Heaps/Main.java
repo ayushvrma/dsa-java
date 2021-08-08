@@ -16,6 +16,8 @@ public class Main {
         heap.printHeap();
 
         heap.delete(1); //delete 75
+
+        heap.printHeap();
     }
 }
 /*
