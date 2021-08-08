@@ -112,4 +112,16 @@ public class Heap {
     public int getParent(int index){
         return (index-1)/2;
     }
+
+    public void sort(){
+        int lastHeapIndex = size -1;
+        for(int i=0; i<lastHeapIndex; i++)
+        {
+            int temp = heap[0]; //largest value in the heap
+            heap[0] = heap[lastHeapIndex -i];
+            heap[lastHeapIndex-i] = temp; //exchanging the root with the last item of the heap
+
+            fixHeapBelow(0, lastHeapIndex-i-1);
+        }
+    }
 }

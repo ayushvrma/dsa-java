@@ -15,7 +15,9 @@ public class Main {
 
         heap.printHeap();
 
-        heap.delete(1); //delete 75
+       // heap.delete(1); //delete 75
+
+        heap.sort();
 
         heap.printHeap();
     }
